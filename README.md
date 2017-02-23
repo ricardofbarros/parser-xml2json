@@ -6,6 +6,35 @@ Blazing fast XML parser to JSON written in Rust ([node2object](https://github.co
 
 - `rust`
 - `cargo`
+- [`node-gyp requirements`](https://github.com/nodejs/node-gyp#installation)
+
+## Usage
+
+```js
+const parser = require('parser-xml2json')
+
+const xml = `
+  <population>
+    <entry>
+      <name>Alex</name>
+      <height>173.5</height>
+    </entry>
+    <entry>
+      <name>Mel</name>
+      <height>180.4</height>
+    </entry>
+  </population>
+`
+
+parser.parseString(xml, (err, res) => {
+   ...
+})
+
+parser.parseFile('/a/xml/file/somewhere.xml', { object: true }, (err, res) => {
+  ...
+})
+
+```
 
 ## API
 
