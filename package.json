@@ -1,0 +1,37 @@
+{
+  "name": "parser-xml2json",
+  "version": "0.1.0",
+  "description": "Blazing fast XML parser to JSON written in Rust",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "standard || snazzy",
+    "test": "mocha ",
+    "postinstall": "cargo build --release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricardofbarros/parser-xml2json.git"
+  },
+  "author": {
+    "name": "Ricardo Barros",
+    "email": "ricardofbarros@hotmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ricardofbarros/parser-xml2json/issues"
+  },
+  "homepage": "https://github.com/ricardofbarros/parser-xml2json",
+  "dependencies": {
+    "ffi": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "parsers-bench",
+  "version": "1.0.0",
+  "description": "XML 2 JSON Parsers benchmark",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "xml2js": "^0.4.17",
+    "async": "^2.1.5",
+    "easy-table": "^1.0.0",
+    "xml2json": "^0.11.0"
+  }
+}
