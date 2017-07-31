@@ -26,32 +26,26 @@ const xml = `
   </population>
 `
 
-parser.parseString(xml, (err, res) => {
-   ...
-})
+const json = await parser.parseString(xml, false)
 
-parser.parseFile('/a/xml/file/somewhere.xml', { object: true }, (err, res) => {
-  ...
-})
+const object = await parser.parseFile('/a/xml/file/somewhere.xml')
 
 ```
 
 ## API
 
-### `parseString(xmlString[, options], callback)`
+### `async parseString(xmlString[, parse])`
  - `xmlString` - A string that represents an XML
- - `options` - an optional object where:
-   - `object` - Parse JSON string to Object. default `false`
- - `callback` - a function with the signature `function (err, result)`
+ - `parse` - Parse JSON string to Object. default `true`
+ Returns `Object` or `String` dependently on the `parse` argument value.
 
-### `parseFile(filePath[, options], callback)`
-- `filePath` - Relative or absolute path to an `.xml` file
-- `options` - an optional object where:
-  - `object` - Parse JSON string to Object. default `false`
-- `callback` - a function with the signature `function (err, result)`
+### `async parseFile(filePath[, parse])`
+ - `filePath` - Relative or absolute path to an `.xml` file
+ - `parse` - Parse JSON string to Object. default `true`
+ Returns `Object` or `String` dependently on the `parse` argument value.
 
 
-## Benchmark
+## Benchmark (TO BE CLARIFIED)
 Results from a i7 2.2 Ghz
 
 ```
