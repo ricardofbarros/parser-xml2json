@@ -1,0 +1,23 @@
+[package]
+name = "parser-xml2json"
+version = "0.2.0"
+authors = ["Ricardo Barros <ricardofbarros@hotmail.com>", "Alexandr Priezzhev <a@priezz.net>"]
+license = "MIT"
+build = "build.rs"
+
+[lib]
+name = "parser_xml2json"
+crate-type = ["dylib"]
+
+[build-dependencies]
+neon-build = "0.1.18"
+
+[dependencies]
+neon = "0.1.18"
+treexml = "0.6.1"
+serde_json = "1.0.2"
+
+[dependencies.node2object]
+# version = "0.15.*"
+git = "https://github.com/priezz/node2object"
+rev = "553b5683307fe3278d54d7909dc68a4622880771"

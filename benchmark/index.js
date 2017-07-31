@@ -66,12 +66,17 @@ function runSync (fn, opts) {
 }
 
 async.series([
-  (next) => runAsync(parserXmlToJson, { object: true }, (timeTaken) => {
+  (next) => {
+    const timeTaken = runSync(
+      async(opts) => {await parserXmlToJson(opts)},
+      {}
+    )
+
     table.cell('Package', 'parser-xml2json (rust)')
     table.cell('Time taken', timeTaken)
     table.newRow()
     next()
-  }),
+  },
   (next) => runAsync(xml2js, {}, (timeTaken) => {
     table.cell('Package', 'xml2js (js)')
     table.cell('Time taken', timeTaken)

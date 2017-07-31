@@ -1,33 +1,33 @@
 {
   "name": "parser-xml2json",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Blazing fast XML parser to JSON written in Rust",
   "main": "lib/index.js",
-  "scripts": {
-    "lint": "standard || snazzy",
-    "test": "mocha ",
-    "postinstall": "cargo build --release"
-  },
-  "keywords": [
-    "xml",
-    "json",
-    "parser"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricardofbarros/parser-xml2json.git"
+    "url": "https://github.com/ricardofbarros/parser-xml2json"
   },
+  "bugs": {
+    "url": "https://github.com/ricardofbarros/parser-xml2json/issues"
+  },
+  "homepage": "https://github.com/ricardofbarros/parser-xml2json",
   "author": {
     "name": "Ricardo Barros",
     "email": "ricardofbarros@hotmail.com"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ricardofbarros/parser-xml2json/issues"
+  "keywords": [
+    "xml",
+    "json",
+    "parser"
+  ],
+  "scripts": {
+    "lint": "standard || snazzy",
+    "test": "mocha",
+    "install": "neon build"
   },
-  "homepage": "https://github.com/ricardofbarros/parser-xml2json",
   "dependencies": {
-    "ffi": "^2.2.0"
+    "neon-cli": "^0.1.18"
   },
   "devDependencies": {
     "chai": "^3.5.0",
